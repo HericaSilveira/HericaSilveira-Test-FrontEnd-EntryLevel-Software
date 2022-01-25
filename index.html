@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+	</head>
+<body>
+	<div class="col-lg-12">
+		<h1 class="text-primary">Detalles del cliente</h1>
+		<hr style="border-top:1px dotted #ccc;"/>
+		<div class="form-row>
+			<form javascript:void(0); id="form-clientes" method="POST" class="form-clientes" onsubmit="postData()">
+				<div class="form-group col-lg-3">
+					<label for="_id">_id</label>
+					<input id="input_id" autocomplete="off" type="text" name="_id"/>
+				</div>
+				
+				<div class="form-group col-lg-3">
+					<label for="nombre">Nombre</label>
+					<input id="input-nombre" autocomplete="off" type="text" name="nombre"/>
+				</div>
+	
+				<div class="form-group col-lg-3">
+					<label for="apellido">Apellido</label>
+					<input id="input-apellido" autocomplete="off" type="text" name="apellido"/>
+				</div>
+	
+				<div class="form-group col-lg-3">
+					<label for="rut">Rut</label>
+					<input id="input-rut" autocomplete="off" type="text" name="rut"/>
+				</div>
+	
+				<div class="form-group col-lg-3">
+					<label for="telefono">Teléfono</label>
+					<input id="input-telefono" autocomplete="off" type="text" name="telefono"/>
+				</div>
+	
+				<div class="form-group col-lg-3">
+					<label for="tipo">Tipo</label>
+					<select id="select-tipo" autocomplete="off" name="select">
+						<option value="empresa">Empresa</option>
+						<option value="consumidor final">Consumidor Final</option>
+					</select>
+				</div>
+	
+				<div class="form-group col-lg-3">
+				<label for="activo">Activo</label>
+				<input class="checkActivo" id="check-activo" autocomplete="off" type="checkbox"/>
+				</div>
+				<button type="submit" id="btn-add" class="btn btn-primary form-control">Añadir</button>
+				<button id="btn-update" class="btn btn-warning form-control">Actualizar</button>
+			</form>
+			
+			<table class="table table-bordered">
+				<caption>Clientes</caption>
+				<thead>
+					<th>_id</th>
+					<th>Nombre</th>
+					<th>Apellido</th>
+					<th>Rut</th>
+					<th>Teléfono</th>
+					<th>Tipo</th>
+					<th>Activo</th>
+					<th>Acción</th>
+				</thead>
+				<tbody id="lista-clientes">
+				</tbody>
+			</table>   
+		</div>
+	</div>
+</body>
+<script src="js/script.js"></script>
+</html>
